@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
         const {userMessage, conversationHistory} = req.body;
         
         const response = await axios.post(
-            `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${GEMINI_API_KEY}`,
+            // printf("Background process %d completed\n", pid);  // Removed noisy log
             {
                 contents: [{
                     parts: [{
